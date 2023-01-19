@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web form</title>
+    <style> 
+    body {
+        background-color: rgb(176, 187, 243);
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Web Development Assignment</h1>
+        
+         <label>Enter your name:</label> 
+        <input id="firstName" type="text"></input>
+        <button id="submitButton" type="submit">Login</button>
+        <h1 id='result'></h1>
+        
+        <p>Assignment done by Himanshu Khichar (12016956)</p>
+    </div>
+    <script>
+        function userNameInput () {
+        var firstName = document.getElementById('firstName').value;
+         var result = document.getElementById('result');
+
+         if (firstName.length < 3) {
+            result.textContent = 'Name must contain at least 3 characters';
+        //alert('Username must contain at least 3 characters');
+        } else {
+        result.textContent = 'Hey ! ' + firstName +  ' Welcome to LPU college';
+       //alert(nameField);
+        }
+}
+
+submitButton.addEventListener('click', userNameInput, false);
+
+    </script>
+</body>
+</html>
+
